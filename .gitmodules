@@ -1,0 +1,6 @@
+[submodule "external/draco"]
+	path = external/draco
+	url = https://gitee.com/mirrors/google-draco.git
+[submodule "external/glfw"]
+	path = external/glfw
+	url = https://gitee.com/mirrors/glfw.git

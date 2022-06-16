@@ -1,0 +1,21 @@
+SET(GLTF_NAME "glTFViewer")
+SET(SOURCE glTFViewer.cpp)
+file(GLOB SHADERS "../data/shaders/*.vert" "../data/shaders/*.frag" "../data/shaders/*.comp" "../data/shaders/*.geom" "../data/shaders/*.tesc" "../data/shaders/*.tese")
+source_group("Shaders" FILES ${SHADERS})
+
+if(WIN32)
+	add_executable(${GLTF_NAME} WIN32 ${MAIN_CPP} ${SOURCE} ${SHADERS})
+    target_link_libraries(${GLTF_NAME} framework platform draco ${Vulkan_LIBRARY} ${WINLIBS})
+elseif(APPLE)
+    add_executable(${GLTF_NAME} ${MAIN_CPP} ${SOURCE} ${SHADERS})
+    target_include_directories(${GLTF_NAME} PUBLIC  ${GLFW3_INCLUDE_DIR} ${CMAKE_SOURCE_DIR}/external/draco/src ${CMAKE_BINARY_DIR})
+    target_link_libraries(${GLTF_NAME} framework platform ${CMAKE_BINARY_DIR}/external/draco/libdraco.a)
+elseif(LINUX)
+    add_executable(${GLTF_NAME} ${MAIN_CPP} ${SOURCE} ${SHADERS})
+    target_link_libraries(${GLTF_NAME} framework platform ${CMAKE_BINARY_DIR}/external/draco/libdraco.a)
+endif()
+
+
+if(RESOURCE_INSTALL_DIR)
+    install(TARGETS ${EXAMPLE_NAME} DESTINATION ${CMAKE_INSTALL_BINDIR})
+endif()

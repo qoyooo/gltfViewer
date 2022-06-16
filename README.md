@@ -10,11 +10,15 @@ Software architecture description
 
 #### Dependencies
 
+* [draco](https://github.com/google/draco) : Draco is a library for compressing and decompressing 3D geometric meshes and point clouds. It is intended to improve the storage and transmission of 3D graphics.
 * [glfw](https://github.com/glfw/glfw) : A multi-platform library for OpenGL, OpenGL ES, Vulkan, window and input.
+* [gli](https://github.com/g-truc/gli) : OpenGL Image (GLI).
+* [glm](https://github.com/g-truc/glm) : OpenGL Mathematics (GLM).
 * [imgui](https://github.com/ocornut/imgui) : Dear ImGui: Bloat-free Immediate Mode Graphical User interface for C++ with minimal dependencies.
 * [imguizmo](https://github.com/CedricGuillemet/ImGuizmo) : Immediate mode 3D gizmo for scene editing and other controls based on Dear Imgui.
 * [spdlog](https://github.com/gabime/spdlog) : Fast C++ logging library.
 * [stb](https://github.com/nothings/stb) : Single-file public domain (or MIT licensed) libraries for C/C++.
+* [tinyfiledialogs](https://sourceforge.net/projects/tinyfiledialogs/) : one C file + header (add them to your C or C++ project) for file dialog.
 * [tinygltf](https://github.com/syoyo/tinygltf) : Header only C++11 tiny glTF 2.0 library
 
 
