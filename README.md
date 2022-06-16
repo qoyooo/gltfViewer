@@ -22,28 +22,31 @@ Software architecture description
 
 1. Download and install [Vulkan SDK](https://vulkan.lunarg.com/)
 2. Clone the repository: this repository contains submodules for some of the external dependencies, so when doing a fresh clone you need to clone recursively:
-        ```
-        git clone --recursive https://gitee.com/xuanyishenzhen/glTFViewer.git
-        ```
-        or
-        ```
-        git clone https://gitee.com/xuanyishenzhen/glTFViewer.git
-        git submodule init
-        git submodule update
-        ```
+
+    ```
+    git clone --recursive https://gitee.com/xuanyishenzhen/glTFViewer.git
+    ```
+
+    or
+
+    ```
+    git clone https://gitee.com/xuanyishenzhen/glTFViewer.git
+    git submodule init
+    git submodule update
+    ```
 
 3. Building & Running
 * MacOS
+
     ```
     cd glTFViewer
     mkdir build
     cd build
     cmake ..
-
     make
-
     ./glTFViewer
     ```
+
     Attention: it must be in 'build' directory to run glTFViewer, because the shader and resources use relative path.
 
 * Window
